@@ -2,14 +2,14 @@ simple-db
 =========
 
 Introduction
-++++++++++++
+------------
 
 This tiny project will makes you begin with a [Vagrant](https://vagrantup.com) + [Docker](https://docker.com/) stack.
 
 The goal is to run a [PostgreSQL](http://www.postgresql.org/) database server, and run some requests onto this database, from a command line client.
 
 How to run ?
-++++++++++++
+------------
 
 At first, launch the vagrant box, and connect to it thru SSH :
 ```
@@ -36,7 +36,7 @@ $ docker run --link dbserver:db -ti postgres:9.4 sh -c 'exec psql -h "$DB_PORT_5
 ```
 
 Goal
-++++
+----
 
 The goal of this exercise is to create a table "account" inside a new database "dab", which has 2 columns : 
 * accountid : primary key, integer value , auto-incremented
