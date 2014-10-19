@@ -13,4 +13,15 @@ $ VBoxManage -v
 4.3.12....
 ```
 * If you're under an HTTP proxy :
- * bla 
+ * Vagrant plugin's *vagrant-proxyconf* is installed and >= 1.4.0
+```
+$ vagrant plugin list
+...
+vagrant-proxyconf (1.4.0)
+...
+```
+ * Your system environment variables points to the proxy :
+```
+> echo %HTTP_PROXY% #(Windows)
+$ echo $HTTP_PROXY #(Linux)
+```
