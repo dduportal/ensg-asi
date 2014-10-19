@@ -23,5 +23,14 @@ vagrant-proxyconf (1.4.0)
  * Your system environment variables points to the proxy :
 ```
 > echo %HTTP_PROXY% #(Windows)
-$ echo $HTTP_PROXY #(Linux)
+> echo %HTTPS_PROXY% #(Windows)
+> echo %NO_PROXY% #(Windows)
+$ echo $http_proxy #(Linux)
+$ echo $https_proxy #(Linux)
+$ echo $no_proxy #(Linux)
+```
+ * Same thing with vagrant-proxyconf's configuration :
+```
+> echo %VAGRANT_HHTTP_PROXY%
+> echo %VAGRANT_NO_PROXY%
 ```
