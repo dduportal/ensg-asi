@@ -43,3 +43,5 @@ The goal of this exercise is to create a table "account" inside a new database "
 * accountbalance : integer value
 
 Then create two accounts : one empty (0 in  balance), and one with positive value (whatever you want)
+
+[Click here for SQL's solution](/solution.md)
