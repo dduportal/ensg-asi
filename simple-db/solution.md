@@ -11,6 +11,10 @@ Golden rules for psql interactive command
 * Don't forget the ';' at the end of your lines !
 * When referencing a postgres object (a sequence for example), use the simple quote (') char 
 
+
+The solution !
+--------------
+
 * First, we have to create a new database and jump into database in order to isolate our actions :
 ```
 postgres#= CREATE DATABASE dab;
