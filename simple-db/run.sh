@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMAGE_NAME="postgres:9.4"
+IMAGE_NAME="jamesbrink/postgresql:latest"
 SERVER_NAME="dbserver"
 
 echo "== Trying to download docker image for ${IMAGE_NAME}..."
