@@ -1,0 +1,8 @@
+dbserver:
+  image: "jamesbrink/postgresql:latest"
+  volumes:
+  - /vagrant:/vagrant
+  environment:
+    PGPASSWORD: postgres
+  expose:
+  - "5432:5432"
