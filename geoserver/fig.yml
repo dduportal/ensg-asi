@@ -1,0 +1,24 @@
+data:
+  image: "busybox:latest"
+  volumes:
+    - /geoserver-data_dir
+  command: "true"
+# registry:
+#   image: "registry:0.7.3"
+#   expose:
+#     - "5000"
+#   volumes_from:
+#     - data
+#   environment:
+#     SETTINGS_FLAVOR: local
+#     STORAGE_PATH: /registry-data
+#     VIRTUAL_HOST: docker-registry
+#     VIRTUAL_PORT: 5000
+# front:
+#   build: /app/dockerfiles/nginx-dyn/
+#   environment:
+#     DOCKER_HOST: tcp://172.17.42.1:2375
+#   ports:
+#     - "80:80"
+#   links:
+#     - registry
