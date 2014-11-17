@@ -22,11 +22,3 @@ docker run --name ${GEOS_SERVER_NAME} --link ${DB_SERVER_NAME}:postgis_db -p 808
 sleep 5
 
 exit 0
-
-#####
-
-# echo "=======   Adresse IP du SGBD Postgres   =========="
-# docker inspect  ${SERVER_PG_NAME} | grep "IPAddress" | cut -d: -f2 | cut -d, -f1| cut -d\" -f2
-
-# echo "=======   Creation de la base de données Postgis entrepot avec insertion Geofla 2013 Communes France Métropolitaine (IGN) , ville de Cognac =========="
-# docker run --link ${SERVER_PG_NAME}:db -ti -v /vagrant:/vagrant jamesbrink/postgresql sh -c 'exec psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres  -f /vagrant/donnees_boot2geoportal/bd_postgis.sql'
