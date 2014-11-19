@@ -1,0 +1,25 @@
+dbserver:
+  image: "jamesbrink/postgresql:latest"
+  volumes:
+    - /vagrant:/vagrant
+  environment:
+    PGPASSWORD: postgres
+  ports:
+    - "5432:5432"
+geoserver:
+  image: "dduportal/geoserver:2.6.1"
+  environment:
+    - VIRTUAL_HOST=geoserver
+    - VIRTUAL_PORT=8080
+  expose:
+    - "8080"
+  links:
+    - dbserver
+lb:
+  image : "dduportal/dyn-nginx:latest"
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  ports:
+    - "8080:80"
+  links:
+    - geoserver
